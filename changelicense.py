@@ -3,7 +3,7 @@ import sys
 
 path=sys.argv[1]
 license_to_replace="// Copyright (c) 2014-2017, The Monero Project"
-license=           "// Copyright (c) 2014-2017, The Monero Project"
+license=           "// Copyright (c) 2014-2017, The Monero Project\n// Copyright (c) 2017-2018, The Monero Project\n"
 
 counter=0
 
