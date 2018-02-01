@@ -22,18 +22,8 @@ for filename in files_container:
              if license_to_replace in line:
                   flag=True
                   counter+=1
-                  print line
-                  
                   tmp_source_lines.append(license_line1)
                   tmp_source_lines.append(license_line2)
-                  
-                #  line=line.replace(license_to_replace,license)
-                 # tmp_filename=filename+".xxxxx"
-                  #wstream=open(tmp_filename,"w")
-                  #wstream.write(source)
-                  #os.remove(item)
-                  #filename=tmp_filename.replace(".xxxxx","")
-                  #os.rename(tmp_filename,filename)
              else:
                   tmp_source_lines.append(line)
         if flag==True:
