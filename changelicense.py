@@ -2,7 +2,8 @@ import os
 import sys
 
 path=sys.argv[1]
-license_to_replace="Copyright (c) 2017, edollar project"# (fork from Monero)"
+license_to_replace1="Copyright (c) 2017, edollar project"# (fork from Monero)"
+license_to_replace2="Copyright (c) 2017, Edollar Project"
 license_line1=           "// Copyright (c) 2014-2017, The Monero Project\n"
 license_line2=           "// Copyright (c) 2017-2018, The Monero Project\n"
 
@@ -19,7 +20,7 @@ for filename in files_container:
         tmp_source_lines=[]
         flag=False 
         for line in lines:
-             if license_to_replace in line:
+             if license_to_replace1 in line or license_to_replace2 in line:
                   flag=True
                   counter+=1
                   tmp_source_lines.append(license_line1)
@@ -32,3 +33,6 @@ for filename in files_container:
              for line in tmp_source_lines:
                   newline=line#[:-1]
                   wstream.write("%s" % newline)
+             os.remove(filename)
+             new_filename=tmp_filename.replace(".xxxxx","")
+             os.rename(tmp_filename,new_filename)
