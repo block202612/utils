@@ -4,8 +4,8 @@ import sys
 path=sys.argv[1]
 license_to_replace1="Copyright (c) 2017, edollar project"# (fork from Monero)"
 license_to_replace2="Copyright (c) 2017, Edollar Project"
-license_line1=           "// Copyright (c) 2014-2017, The Monero Project\n"
-license_line2=           "// Copyright (c) 2017-2018, The Monero Project\n"
+license_line2=           "// Copyright (c) 2014-2017, The Monero Project\n"
+license_line1=           "// Copyright (c) 2017-2018, The Monero Project\n"
 
 counter=0
 
